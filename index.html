@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500">
+
+    <div class="container mx-auto px-4 py-8 md:py-16">
+        <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12 text-center">
+            
+            <!-- Profile Image -->
+            <img 
+                src="https://placehold.co/128x128/7c3aed/ffffff?text=头像" 
+                alt="个人头像"
+                class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white dark:border-gray-700 shadow-md"
+                onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Error';"
+            >
+
+            <!-- Name and Title -->
+            <h1 class="text-4xl md:text-5xl font-bold text-violet-600 dark:text-violet-400">你好，世界！</h1>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">我是 [你的名字], 一位充满热情的开发者和创造者。</p>
+
+            <!-- Bio Section -->
+            <div class="mt-8 text-left border-t border-gray-200 dark:border-gray-700 pt-8">
+                <h2 class="text-2xl font-semibold text-center mb-4">关于我</h2>
+                <p class="text-base leading-relaxed">
+                    这里是你的个人简介。你可以介绍你的兴趣、专业技能、工作经历或是任何你想分享的事情。试着编辑这段文字，让它成为你独一無二的介绍！例如，你可以写：我热衷于探索新技术，喜欢用代码解决实际问题。平时我喜欢阅读、爬山和摄影。
+                </p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">找到我</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.013c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.82c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.013C22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <footer class="text-center mt-8 text-sm text-gray-500 dark:text-gray-400">
+            <p>&copy; <span id="year"></span> [你的名字]. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
 
